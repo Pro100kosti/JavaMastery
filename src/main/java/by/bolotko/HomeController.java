@@ -1,21 +1,18 @@
 package by.bolotko;
 
-import by.bolotko.DB.Director;
-import by.bolotko.services.DirectorService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 public class HomeController {
 
-    @Autowired
-    private DirectorService directorService;
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(){
+        return "index";
+    }
 
-    @GetMapping("/save-director")
-    public String saveDirector(@RequestParam String first_name, @RequestParam String last_name,
-                               @RequestParam String birth_date){
-        Director director = new Director(first_name, last_name, birth_date);
-        directorService.saveDirector(director);
-        return "Director is saved";
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
+    public String greeting() {
+        return "greeting";
     }
 }

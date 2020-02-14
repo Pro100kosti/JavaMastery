@@ -17,6 +17,10 @@ public class DirectorService {
     }
 
     public void saveDirector(Director director) {
+//        if (director.getFirst_name() == null || director.getLast_name() == null ||
+//        director.getBirth_date() == null) {
+//            directorRepository.
+//        }
         directorRepository.save(director);
     }
 

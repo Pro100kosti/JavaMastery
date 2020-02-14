@@ -1,16 +1,15 @@
 package by.bolotko.DB;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
+@Data
+@ToString
 @Entity
-@Table(name = "Cinema")
 public class Director {
 
     @Id
@@ -22,6 +21,9 @@ public class Director {
     private String last_name;
 
     private String birth_date;
+
+    @OneToMany
+    private List<Film> films;
 
     public Director(String first_name, String last_name, String birth_date) {
         this.first_name = first_name;

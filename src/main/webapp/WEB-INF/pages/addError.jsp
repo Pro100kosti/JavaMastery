@@ -1,10 +1,3 @@
-<%--<!DOCTYPE html>--%>
-<%--<html lang="en">--%>
-<%--<head>--%>
-<%--    <meta charset="UTF-8">--%>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style/home.css">--%>
-<%--    <title>Cinema [Java Mastery]</title>--%>
-<%--</head>--%>
 <html>
 <html lang="en">
 <head>
@@ -56,8 +49,12 @@
     </div>
 </nav>
 
+<div class="alert alert-danger" role="alert">
+    Error!!!
+</div>
 
-    <h1>This is Home page!</h1>
+<a class="btn btn-danger" href="${pageContext.request.contextPath}/greeting" role="button">Back</a>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

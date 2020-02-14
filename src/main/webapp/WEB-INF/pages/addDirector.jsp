@@ -1,10 +1,3 @@
-<%--<!DOCTYPE html>--%>
-<%--<html lang="en">--%>
-<%--<head>--%>
-<%--    <meta charset="UTF-8">--%>
-<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style/home.css">--%>
-<%--    <title>Cinema [Java Mastery]</title>--%>
-<%--</head>--%>
 <html>
 <html lang="en">
 <head>
@@ -56,9 +49,28 @@
     </div>
 </nav>
 
+<div class="container" style = "color:darkblue">
+    <legend align="center"><h1>Please enter Director Information:</h1></legend>
+</div>
 
-    <h1>This is Home page!</h1>
+<div class="container">
 
+<form method="POST" action="${pageContext.request.contextPath}/save-director" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Director first name</label>
+        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Director last name</label>
+        <input type="text" name="last_name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Director date of birth</label>
+        <input type="text" name="birth_date" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Enter birth_date">
+    </div>
+    <button type="submit" class="btn btn-warning"><h3>Submit</h3></button>
+</form>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
