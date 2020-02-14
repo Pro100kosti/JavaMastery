@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style/home.css">
-    <title>Spring Boot</title>
+    <title>Cinema [Java Mastery]</title>
 </head>
 <body>
-    <h2>Hello spring boot JSP!!</h2>
+    <h1>This is index page!</h1>
 </body>
 </html>
