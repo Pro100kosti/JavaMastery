@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <html lang="en">
 <head>
@@ -52,31 +53,34 @@
 
 
 
-
-
 <div class="container" style = "color:darkred">
-    <legend align="center"><h1>Please enter Director Information:</h1></legend>
+<legend align="center"><h1>All Directors</h1></legend>
 </div>
 
 <div class="container">
-
-<form method="POST" action="${pageContext.request.contextPath}/save-director" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director first name</label>
-        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director last name</label>
-        <input type="text" name="last_name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter last name">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director date of birth</label>
-        <input type="text" name="birth_date" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Enter birth_date">
-    </div>
-    <button type="submit" class="btn btn-primary"><h3>Submit</h3></button>
-</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"><h3>No.</h3></th>
+        <th scope="col"><h3>First name</h3></th>
+        <th scope="col"><h3>Last name</h3></th>
+        <th scope="col"><h3>Birth date</h3></th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="director" items="${director}">
+        <tr>
+            <th scope="row"><h3>${director.id}</h3></th>
+            <td><a href="${pageContext.request.contextPath}/directors/director/${director.id}"
+                   class="badge badge-warning"><h3>${director.first_name}</h3></a></td>
+            <td><a href="${pageContext.request.contextPath}/directors/director/${director.id}"
+                   class="badge badge-warning"><h3>${director.last_name}</h3></a></td>
+            <td><a><h3>${director.birth_date}</h3></a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 </div>
-
 
 
 

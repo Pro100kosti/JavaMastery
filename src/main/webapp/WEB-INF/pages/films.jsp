@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <html lang="en">
 <head>
@@ -52,31 +53,33 @@
 
 
 
-
-
-<div class="container" style = "color:darkred">
-    <legend align="center"><h1>Please enter Director Information:</h1></legend>
+<div class="container" style = "color:darkgreen">
+<legend align="center"><h1>All Films</h1></legend>
 </div>
 
 <div class="container">
-
-<form method="POST" action="${pageContext.request.contextPath}/save-director" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director first name</label>
-        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director last name</label>
-        <input type="text" name="last_name" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter last name">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Director date of birth</label>
-        <input type="text" name="birth_date" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Enter birth_date">
-    </div>
-    <button type="submit" class="btn btn-primary"><h3>Submit</h3></button>
-</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"><h3>No.</h3></th>
+        <th scope="col"><h3>Name</h3></th>
+        <th scope="col"><h3>Release date</h3></th>
+        <th scope="col"><h3>Genre</h3></th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="film" items="${film}">
+        <tr>
+            <th scope="row"><h3>${film.id}</h3></th>
+            <td><a href="${pageContext.request.contextPath}/films/film/${film.id}"
+                   class="badge badge-warning"><h3>${film.name}</h3></a></td>
+            <td><a><h3>${film.release_date}</h3></a></td>
+            <td><a><h3>${film.genre}</h3></a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 </div>
-
 
 
 

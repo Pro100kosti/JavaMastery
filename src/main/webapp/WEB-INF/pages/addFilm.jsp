@@ -22,10 +22,10 @@
                     <a class="font-weight-bold nav-link active" href="${pageContext.request.contextPath}/"><h3>Home</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/greeting"><h3>Directors</h3></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/directors"><h3>Directors</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/greeting"><h3>Films</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/films"><h3>Films</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
@@ -77,7 +77,7 @@
         <label for="exampleInputEmail1">Id of the movie director</label>
         <input type="number" name="director_id" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Enter the id of the movie director">
     </div>
-    <button type="submit" class="btn btn-warning"><h3>Submit</h3></button>
+    <button type="submit" class="btn btn-primary"><h3>Submit</h3></button>
 </form>
 </div>
 

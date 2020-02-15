@@ -8,7 +8,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@ToString
 @Entity
 public class Director {
 
@@ -29,5 +28,11 @@ public class Director {
         this.first_name = first_name;
         this.last_name = last_name;
         this.birth_date = birth_date;
+    }
+
+    @Override
+    public String toString() {
+        return "id = " + id +
+                ", Director name = " + first_name + " " + last_name;
     }
 }

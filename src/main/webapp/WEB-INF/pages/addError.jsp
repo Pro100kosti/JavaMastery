@@ -22,10 +22,10 @@
                     <a class="font-weight-bold nav-link active" href="${pageContext.request.contextPath}/"><h3>Home</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/greeting"><h3>Directors</h3></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/directors"><h3>Directors</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/greeting"><h3>Films</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/films"><h3>Films</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
