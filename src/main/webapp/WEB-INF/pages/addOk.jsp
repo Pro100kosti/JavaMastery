@@ -32,7 +32,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/save-director"><h3>Create Director</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="#"><h3>Create Film</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/save-film"><h3>Create Film</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
@@ -49,13 +49,16 @@
     </div>
 </nav>
 
-
+<div class="container">
 <div class="alert alert-success" role="alert">
     <h4 class="alert-heading">Well done!</h4>
-    <p>Director created</p>
+    <p>Creation Completed</p>
     <hr>
     <p class="mb-0">Have a nice day!! :)</p>
-    <a class="btn btn-success" href="${pageContext.request.contextPath}/greeting" role="button">Back</a>
+    <a class="btn btn-success" href="${pageContext.request.contextPath}/" role="button">Return to the main page</a>
+    <a class="btn btn-warning" href="${pageContext.request.contextPath}/save-director" role="button">Creat Director</a>
+    <a class="btn btn-warning" href="${pageContext.request.contextPath}/save-film" role="button">Creat Film</a>
+</div>
 </div>
 
 

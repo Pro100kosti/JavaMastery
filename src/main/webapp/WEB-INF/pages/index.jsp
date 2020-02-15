@@ -39,7 +39,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/save-director"><h3>Create Director</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="#"><h3>Create Film</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/save-film"><h3>Create Film</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
@@ -57,7 +57,18 @@
 </nav>
 
 
+
+
+
+
+
     <h1>This is Home page!</h1>
+
+
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

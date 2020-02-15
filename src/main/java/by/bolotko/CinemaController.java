@@ -5,12 +5,8 @@ import by.bolotko.DB.Film;
 import by.bolotko.services.DirectorService;
 import by.bolotko.services.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 
 @RestController
 public class CinemaController {
@@ -29,7 +25,7 @@ public class CinemaController {
         return "addOk";
     }
 
-    @GetMapping("/save-film")
+    @GetMapping("/save-film2")
     public String saveFilm(@RequestParam String name, @RequestParam String release_date,
                                @RequestParam String genre, @RequestParam Director director_id){
         Film film = new Film(name, release_date, genre, director_id);

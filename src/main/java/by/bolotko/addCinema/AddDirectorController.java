@@ -1,4 +1,4 @@
-package by.bolotko;
+package by.bolotko.addCinema;
 
 import by.bolotko.DB.Director;
 import by.bolotko.services.DirectorService;

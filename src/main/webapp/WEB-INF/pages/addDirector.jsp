@@ -32,7 +32,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/save-director"><h3>Create Director</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="#"><h3>Create Film</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/save-film"><h3>Create Film</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
@@ -49,7 +49,12 @@
     </div>
 </nav>
 
-<div class="container" style = "color:darkblue">
+
+
+
+
+
+<div class="container" style = "color:darkred">
     <legend align="center"><h1>Please enter Director Information:</h1></legend>
 </div>
 
@@ -71,6 +76,11 @@
     <button type="submit" class="btn btn-warning"><h3>Submit</h3></button>
 </form>
 </div>
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,6 +1,5 @@
 package by.bolotko.DB;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -14,8 +13,9 @@ import javax.persistence.*;
 public class Film {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @SequenceGenerator(name = "film_seq", sequenceName = "SEQ_FILM", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "film_seq")
+    private Long id;
 
     @ManyToOne
     private Director director_id;

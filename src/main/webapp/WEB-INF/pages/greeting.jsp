@@ -32,7 +32,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/save-director"><h3>Create Director</h3></a>
                 </li>
                 <li class="nav-item px-md-3">
-                    <a class="nav-link" href="#"><h3>Create Film</h3>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/save-film"><h3>Create Film</h3>
                     </a>
                 </li>
                 <li class="nav-item px-md-3">
@@ -51,7 +51,14 @@
 <!-- This is begin of body -->
 
 
+
+
+
 <h1>This is Greeting page!</h1>
+
+
+
+
 
 
 <!-- This is end of body -->
