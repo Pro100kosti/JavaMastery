@@ -1,7 +1,8 @@
-package by.bolotko;
+package by.bolotko.controllers;
 
 import by.bolotko.DB.Director;
 import by.bolotko.services.DirectorService;
+import by.bolotko.services.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +18,9 @@ public class DirectorController {
 
     @Autowired
     private DirectorService directorService;
+
+    @Autowired
+    private FilmService filmService;
 
     @GetMapping()
     public String showDirectors(Model model) {

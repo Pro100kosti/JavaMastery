@@ -1,4 +1,4 @@
-package by.bolotko;
+package by.bolotko.controllers;
 
 import by.bolotko.DB.Director;
 import by.bolotko.DB.Film;

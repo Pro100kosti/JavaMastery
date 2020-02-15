@@ -1,4 +1,4 @@
-package by.bolotko;
+package by.bolotko.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

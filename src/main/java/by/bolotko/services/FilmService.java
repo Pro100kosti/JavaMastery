@@ -29,4 +29,7 @@ public class FilmService {
     public Optional<Film> findFilm(Long id) {
         return filmRepository.findById(id);
     }
+    public Optional<Film> findFilmByDirectorId(Integer id) {
+        return filmRepository.findById(id);
+    }
 }

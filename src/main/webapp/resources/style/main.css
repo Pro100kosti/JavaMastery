@@ -1,0 +1,22 @@
+.intro {
+    /*background-image: url("https://images.wallpaperscraft.ru/image/pyatna_fon_svetlyy_razmytost_68629_1920x1080.jpg");*/
+    background-image: url("https://www.zastavki.com/pictures/1920x1200/2010/Photoshop_Blue_background_025242_.jpg");
+}
+.mane-page {
+    width: 1300px;
+    height: 700px;
+    border: 3px black;
+    margin-top: 60px;
+    margin-left: 320px;
+
+    /*background-image: url("https://dindaanggista.files.wordpress.com/2017/11/welcome1.jpg");*/
+    background-image: url("https://cdn.contactcenterworld.com/imagestemp/115201810522_shutterstock_1146069941.jpg");
+    background-position: center;
+    background-size: 1150px;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: initial;
+    background-color: aliceblue;
+}

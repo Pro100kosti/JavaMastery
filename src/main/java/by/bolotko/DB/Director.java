@@ -21,7 +21,7 @@ public class Director {
 
     private String birth_date;
 
-    @OneToMany
+    @OneToMany(mappedBy = "director_id", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Film> films;
 
     public Director(String first_name, String last_name, String birth_date) {
