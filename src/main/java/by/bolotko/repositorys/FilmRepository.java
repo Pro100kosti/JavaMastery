@@ -7,4 +7,6 @@ import java.util.Optional;
 
 public interface FilmRepository extends CrudRepository<Film, Integer> {
     Optional<Film> findById(Long id);
+
+    void deleteById(Long id);
 }

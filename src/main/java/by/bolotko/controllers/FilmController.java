@@ -20,7 +20,7 @@ public class FilmController {
 
     @GetMapping()
     public String showFilm(Model model) {
-        model.addAttribute("film", filmService.getFirstTopTenFilms());
+        model.addAttribute("film", filmService.getAllFilms());
         return "films";
     }
 

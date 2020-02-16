@@ -18,17 +18,33 @@ public class FilmService {
         this.filmRepository = filmRepository;
     }
 
-    public void saveFilm(Film film) {
-        filmRepository.save(film);
+    public boolean saveFilm(Film film) {
+        if (film.getName() == null || film.getRelease_date() == null
+                || film.getGenre() == null) {
+            return false;
+        } else {
+            filmRepository.save(film);
+            return true;
+        }
     }
 
-    public List<Film> getFirstTopTenFilms() {
+    public boolean deleteFilmById(Long id){
+        if (id == null || id == 0) {
+            return false;
+        } else {
+            filmRepository.deleteById(id);
+            return true;
+        }
+    }
+
+    public List<Film> getAllFilms() {
         return (List<Film>) filmRepository.findAll();
     }
 
     public Optional<Film> findFilm(Long id) {
         return filmRepository.findById(id);
     }
+
     public Optional<Film> findFilmByDirectorId(Integer id) {
         return filmRepository.findById(id);
     }

@@ -25,8 +25,12 @@ public class AddFilmController {
     }
 
     @PostMapping
-    public String submitAddFilmForm(@ModelAttribute Film film){
-        filmService.saveFilm(film);
-        return "addOk";
+    public String submitAddFilmForm(@ModelAttribute Film film) {
+        if (!filmService.saveFilm(film)) {
+            return "addError";
+        } else {
+            return "addOk";
+        }
+
     }
 }

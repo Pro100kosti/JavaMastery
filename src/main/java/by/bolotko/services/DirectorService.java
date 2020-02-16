@@ -20,11 +20,26 @@ public class DirectorService {
         this.directorRepository = directorRepository;
     }
 
-    public void saveDirector(Director director) {
-        directorRepository.save(director);
+    public boolean saveDirector(Director director) {
+        if (director.getFirst_name() == null || director.getLast_name() == null ||
+                director.getBirth_date() == null) {
+            return false;
+        } else {
+            directorRepository.save(director);
+            return true;
+        }
     }
 
-    public List<Director> getFirstTopTenDirectors() {
+    public boolean deleteDirectorById(Integer id){
+        if (id == 0) {
+            return false;
+        } else {
+            directorRepository.deleteById(id);
+            return true;
+        }
+    }
+
+    public List<Director> getAllDirectors() {
         return (List<Director>) directorRepository.findAll();
     }
 
